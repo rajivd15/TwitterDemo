@@ -33,15 +33,18 @@ class TwitterClient: BDBOAuth1SessionManager {
         })
     }
     
-    func currentAccount() {
+    func currentAccount(success: (User)->(), failure: (NSError)->()) {
         //GET Call for Verifying User Credentials.
         GET("1.1/account/verify_credentials.json", parameters: nil, progress: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) in
             //     print("response: - \(response)")
             let userDictionary = response as! NSDictionary
             let user = User(dictionary: userDictionary)
+            
+            success(user)
             print("UserName is - \(user.name)")
         }) { (task: NSURLSessionDataTask?, error: NSError) in
             print("Error In GET - \(error)")
+            failure(error)
         }
     }
     
@@ -71,11 +74,23 @@ class TwitterClient: BDBOAuth1SessionManager {
         fetchAccessTokenWithPath("oauth/access_token", method: "POST", requestToken: requestToken, success: { (accessToken: BDBOAuth1Credential!) -> Void in
             print("I got the access Token - delegate- \(accessToken.token)")
             
-            self.loginSuccess?()
+            self.currentAccount({ (user: User) in
+                User.currentUser = user
+                self.loginSuccess?()
+                }, failure: { (error: NSError) in
+                    self.loginFailure?(error)
+            })
+            
         }) { (error: NSError!) in
             print("ERROR \(error.localizedDescription)")
             self.loginFailure?(error)
         }
-
+    }
+    
+    func logout() {
+        User.currentUser = nil
+        deauthorize()
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(User.userDidLogoutNotification, object: nil)
     }
 }
