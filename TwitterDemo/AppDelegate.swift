@@ -23,46 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         print(url.description)
-        let requestToken = BDBOAuth1Credential(queryString: url.query)
-        let twitterClient = BDBOAuth1SessionManager(baseURL: NSURL(string: "https://api.twitter.com"), consumerKey: "oteay9i7cT9B83aBNl0R8EMId", consumerSecret: "8o0DB6lkjHanxpASbZyGWQ07vXPZSUg5julAwuZMAfpQQoxjiV")
-       
-        //Fetch the API Access Token and then Access other REST API.
-        twitterClient.fetchAccessTokenWithPath("oauth/access_token", method: "POST", requestToken: requestToken, success: { (accessToken: BDBOAuth1Credential!) -> Void in
-            print("I got the access Token - delegate- \(accessToken.token)")
-            
-            //GET Call for Verifying User Credentials.
-            twitterClient.GET("1.1/account/verify_credentials.json", parameters: nil, progress: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) in
-           //     print("response: - \(response)")
-                
-                let userDictionary = response as! NSDictionary
-                let user = User(dictionary: userDictionary)
-                
-                print("UserName is - \(user.name)")
-                
-                
-                
-                
-            }) { (task: NSURLSessionDataTask?, error: NSError) in
-                print("Error In GET - \(error)")
-            }
-
-            //GET twitter client home timeline
-            twitterClient.GET("1.1/statuses/home_timeline.json", parameters: nil, progress: nil, success: { (task : NSURLSessionDataTask, response: AnyObject?) in
-                
-                let dictionaries = response as! [NSDictionary]
-                
-                let tweets = Tweet.tweetsWithArray(dictionaries)
-                
-                for tweet in tweets {
-                    print("\(tweet.text)")
-                    }
-                }, failure: { (task: NSURLSessionDataTask?, error: NSError) in
-                    print("Falied to get timeline - \(error)")
-            })
-            
-        }) { (error: NSError!) in
-            print("ERROR \(error.localizedDescription)")
-        }
+        
+        
+        TwitterClient.sharedInstance.handleOpenUrl(url)
         
         return true
     }
