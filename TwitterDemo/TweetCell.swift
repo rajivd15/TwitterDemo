@@ -20,13 +20,15 @@ class TweetCell: UITableViewCell {
    
     var tweetDetails: Tweet! {
         didSet{
-           // profileImageView.setImageWithURL((tweetDetails.profileImageUrl?))
+            if tweetDetails.profileImageUrl != nil {
+                profileImageView.setImageWithURL((tweetDetails.profileImageUrl!))
+            }
             userNameLabel.text = tweetDetails.userName
             twitterNameLabel.text = tweetDetails.twitterName
             timestampLabel.text = tweetDetails.timestamp as? String
             tweetTextLabel.text = tweetDetails.text
             
-//            print("I am here - - - \(tweetDetails.text)")
+         //   print("I am here - - - \(tweetDetails.timestamp)")
         }
         
     }
