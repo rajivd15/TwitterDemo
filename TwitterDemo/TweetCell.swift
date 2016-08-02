@@ -12,7 +12,6 @@ import AFNetworking
 class TweetCell: UITableViewCell {
 
     @IBOutlet weak var profileImageView: UIImageView!
-    
     @IBOutlet weak var tweetTextLabel: UILabel!
     @IBOutlet weak var timestampLabel: UILabel!
     @IBOutlet weak var twitterNameLabel: UILabel!
@@ -29,7 +28,7 @@ class TweetCell: UITableViewCell {
             let formatter = NSDateFormatter()
             formatter.dateFormat = "HH:MM"
             if tweetDetails.timestamp != nil {
-            let time  = formatter.stringFromDate(tweetDetails.timestamp!)
+                let time  = formatter.stringFromDate(tweetDetails.timestamp!)
                 timestampLabel.text = time
             }
             tweetTextLabel.text = tweetDetails.text as? String

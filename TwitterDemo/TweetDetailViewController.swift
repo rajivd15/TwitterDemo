@@ -35,10 +35,13 @@ class TweetDetailViewController: UIViewController {
         detailFavoritesCountLabel.text = NSString(format:"%d", tweet.favoritesCount) as String
         detailReTweetCountLabel.text = NSString(format:"%d", tweet.retweetCount) as String
  
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "EEE MMM d"
-        let time  = formatter.stringFromDate(tweet.timestamp!)
-        detailTimestamp.text = time
+       
+        
+        if tweet.timestamp != nil {
+            let formatter = NSDateFormatter()
+            formatter.dateFormat = "EEE MMM d"
+            let time  = formatter.stringFromDate(tweet.timestamp!)
+            detailTimestamp.text = time        }
     }
 
     override func didReceiveMemoryWarning() {
