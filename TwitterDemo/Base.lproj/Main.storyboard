@@ -58,7 +58,7 @@
                                         <rect key="frame" x="0.0" y="92" width="320" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Myd-Cd-KJ8" id="OWt-Zp-ZcZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="111.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fxX-OY-W8k">
@@ -226,6 +226,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tweet" id="1t8-k3-Rmb"/>
+                    <connections>
+                        <outlet property="detailFavoritesCountLabel" destination="hMe-OS-P8S" id="IyU-ib-H2e"/>
+                        <outlet property="detailFavotitesCountLabel" destination="hMe-OS-P8S" id="hDR-AD-t8z"/>
+                        <outlet property="detailProfileImageVIew" destination="9dZ-yU-LuX" id="o28-0Z-5Ih"/>
+                        <outlet property="detailReTweetCountLabel" destination="x0p-7c-GtT" id="ll7-jk-gzh"/>
+                        <outlet property="detailScreenNameLabel" destination="eqW-ws-UZU" id="Rzo-Pq-agA"/>
+                        <outlet property="detailTimestamp" destination="9M7-E9-bTP" id="13N-Fr-2le"/>
+                        <outlet property="detailTweetTextLabel" destination="gGr-y8-cZY" id="VcB-eW-13E"/>
+                        <outlet property="detailUserNameLabel" destination="aMX-D2-noG" id="SW7-AS-YqA"/>
+                        <outlet property="userRetweetNameLabel" destination="Xkz-ra-aLN" id="4lu-cI-dQc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAY-wk-Gcm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

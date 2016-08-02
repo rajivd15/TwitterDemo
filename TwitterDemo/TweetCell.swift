@@ -20,17 +20,20 @@ class TweetCell: UITableViewCell {
    
     var tweetDetails: Tweet! {
         didSet{
-            if tweetDetails.profileImageUrl != nil {
-                profileImageView.setImageWithURL((tweetDetails.profileImageUrl!))
+            if tweetDetails.user?.profileUrl != nil {
+                profileImageView.setImageWithURL((tweetDetails.user?.profileUrl)!)
             }
-            userNameLabel.text = tweetDetails.userName
-            twitterNameLabel.text = tweetDetails.twitterName
-            timestampLabel.text = tweetDetails.timestamp as? String
-            tweetTextLabel.text = tweetDetails.text
+            userNameLabel.text = tweetDetails.user!.name as? String
+            twitterNameLabel.text = tweetDetails.user!.screenname as? String
             
-         //   print("I am here - - - \(tweetDetails.timestamp)")
+            let formatter = NSDateFormatter()
+            formatter.dateFormat = "HH:MM"
+            if tweetDetails.timestamp != nil {
+            let time  = formatter.stringFromDate(tweetDetails.timestamp!)
+                timestampLabel.text = time
+            }
+            tweetTextLabel.text = tweetDetails.text as? String
         }
-        
     }
     
     override func awakeFromNib() {
