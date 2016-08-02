@@ -18,6 +18,11 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Adding Refresh Control Support
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        tableView.insertSubview(refreshControl, atIndex: 0)
+
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -29,7 +34,17 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         }) { (error: NSError) in
                 print("Error: \(error)")
         }
-        
+    }
+    
+    //Making the API call for refreshing the Home Tweets Tab. 
+    func refreshControlAction(refreshControl: UIRefreshControl) {
+        client.homeTimeline({ (data: [Tweet]) in
+            self.tweets = data
+            self.tableView.reloadData()
+            refreshControl.endRefreshing()
+        }) { (error: NSError) in
+            print("Error: \(error)")
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
