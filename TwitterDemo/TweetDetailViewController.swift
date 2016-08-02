@@ -10,10 +10,13 @@ import UIKit
 
 class TweetDetailViewController: UIViewController {
 
+    var tweet: Tweet!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.navigationBar.topItem!.title = "Home"
 
+        print(tweet.text)
         // Do any additional setup after loading the view.
     }
 
