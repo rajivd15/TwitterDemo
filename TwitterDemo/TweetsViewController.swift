@@ -36,7 +36,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    //Making the API call for refreshing the Home Tweets Tab. 
+    //Making the API call for refreshing the Home Tweets Tab.
     func refreshControlAction(refreshControl: UIRefreshControl) {
         client.homeTimeline({ (data: [Tweet]) in
             self.tweets = data
@@ -70,14 +70,23 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         TwitterClient.sharedInstance.logout()
     }
 
-    /*
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //Get rid of the gray selection effect by deselecting the cell with animation
+        tableView.deselectRowAtIndexPath(indexPath, animated:true)
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        print("prepare for Segue")
+        
+        
+        
+        
     }
-    */
+    
 
 }

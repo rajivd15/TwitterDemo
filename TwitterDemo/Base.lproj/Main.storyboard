@@ -58,7 +58,7 @@
                                         <rect key="frame" x="0.0" y="92" width="320" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Myd-Cd-KJ8" id="OWt-Zp-ZcZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="111.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fxX-OY-W8k">
@@ -116,6 +116,7 @@
                                             <outlet property="tweetTextLabel" destination="7ii-7w-sMI" id="p7f-Dc-6HL"/>
                                             <outlet property="twitterNameLabel" destination="nO7-x7-R0b" id="7lQ-D2-gup"/>
                                             <outlet property="userNameLabel" destination="iev-BF-DOk" id="qoh-2J-kUd"/>
+                                            <segue destination="ess-Ic-Gw6" kind="push" id="Ckd-Oq-o6T"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -143,6 +144,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lE-e6-HTw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1227" y="335"/>
+        </scene>
+        <!--Tweet Detail View Controller-->
+        <scene sceneID="UTQ-2H-DpR">
+            <objects>
+                <viewController id="ess-Ic-Gw6" customClass="TweetDetailViewController" customModule="TwitterDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OyS-53-e7j"/>
+                        <viewControllerLayoutGuide type="bottom" id="WZU-rS-tx9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yO3-Nb-DJl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1t8-k3-Rmb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mAY-wk-Gcm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613" y="335"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bnz-Ab-mBY">
