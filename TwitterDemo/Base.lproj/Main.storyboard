@@ -165,7 +165,7 @@
                                     <constraint firstAttribute="width" constant="40" id="f4k-9g-h69"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rajiv Deshmukh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMX-D2-noG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Rajiv Deshmukh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMX-D2-noG">
                                 <rect key="frame" x="56" y="72" width="104" height="16"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -228,7 +228,7 @@
                             <constraint firstItem="aMX-D2-noG" firstAttribute="top" secondItem="OyS-53-e7j" secondAttribute="bottom" constant="8" id="3yh-EF-r1h"/>
                             <constraint firstItem="uoW-6n-QDx" firstAttribute="leading" secondItem="x0p-7c-GtT" secondAttribute="trailing" constant="8" id="5i3-hS-7bH"/>
                             <constraint firstItem="gGr-y8-cZY" firstAttribute="top" secondItem="9dZ-yU-LuX" secondAttribute="bottom" constant="15" id="7gR-wz-jMU"/>
-                            <constraint firstAttribute="trailing" secondItem="aMX-D2-noG" secondAttribute="trailing" constant="160" id="875-YT-xIn"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aMX-D2-noG" secondAttribute="trailing" constant="8" id="875-YT-xIn"/>
                             <constraint firstItem="gGr-y8-cZY" firstAttribute="leading" secondItem="yO3-Nb-DJl" secondAttribute="leading" constant="8" id="8Ii-qf-lvA"/>
                             <constraint firstItem="eqW-ws-UZU" firstAttribute="leading" secondItem="9dZ-yU-LuX" secondAttribute="trailing" constant="8" id="8Wu-WZ-cLv"/>
                             <constraint firstItem="hMe-OS-P8S" firstAttribute="leading" secondItem="uoW-6n-QDx" secondAttribute="trailing" constant="17" id="B4X-qd-KIq"/>
