@@ -50,45 +50,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y4G-rj-cFO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="112" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y4G-rj-cFO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="80" id="Myd-Cd-KJ8" customClass="TweetCell" customModule="TwitterDemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="112" id="Myd-Cd-KJ8" customClass="TweetCell" customModule="TwitterDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Myd-Cd-KJ8" id="OWt-Zp-ZcZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="111.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fxX-OY-W8k">
-                                                    <rect key="frame" x="8" y="0.0" width="57" height="47"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fxX-OY-W8k">
+                                                    <rect key="frame" x="8" y="8" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="3ys-Q6-7Un"/>
+                                                        <constraint firstAttribute="width" constant="40" id="Mvb-Ge-GMZ"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rajiv Deshmukh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iev-BF-DOk">
-                                                    <rect key="frame" x="73" y="1" width="97" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rajiv Deshmukh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iev-BF-DOk">
+                                                    <rect key="frame" x="56" y="8" width="97" height="15"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@rdeshmukh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nO7-x7-R0b">
-                                                    <rect key="frame" x="173" y="1" width="75" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/14/14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvP-XI-skB">
+                                                    <rect key="frame" x="271" y="8" width="41" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1/14/14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvP-XI-skB">
-                                                    <rect key="frame" x="271" y="0.0" width="41" height="15"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I have seen the Future " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ii-7w-sMI">
-                                                    <rect key="frame" x="73" y="19" width="165" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have seen the Future " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ii-7w-sMI">
+                                                    <rect key="frame" x="56" y="28" width="256" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="@rdeshmukh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nO7-x7-R0b">
+                                                    <rect key="frame" x="158" y="8" width="75" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7ii-7w-sMI" secondAttribute="bottom" constant="15" id="07H-t8-bvk"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fxX-OY-W8k" secondAttribute="bottom" constant="15" id="0Yo-I2-Ucx"/>
+                                                <constraint firstItem="vvP-XI-skB" firstAttribute="top" secondItem="OWt-Zp-ZcZ" secondAttribute="top" constant="8" id="Eei-Wf-GhL"/>
+                                                <constraint firstItem="iev-BF-DOk" firstAttribute="leading" secondItem="fxX-OY-W8k" secondAttribute="trailing" constant="8" id="Lwp-bA-mLx"/>
+                                                <constraint firstItem="nO7-x7-R0b" firstAttribute="top" secondItem="OWt-Zp-ZcZ" secondAttribute="top" constant="8" id="SN0-tz-0bL"/>
+                                                <constraint firstItem="fxX-OY-W8k" firstAttribute="leading" secondItem="OWt-Zp-ZcZ" secondAttribute="leading" constant="8" id="atO-jL-oVM"/>
+                                                <constraint firstItem="nO7-x7-R0b" firstAttribute="leading" secondItem="iev-BF-DOk" secondAttribute="trailing" constant="5" id="eyK-qh-pye"/>
+                                                <constraint firstItem="fxX-OY-W8k" firstAttribute="top" secondItem="OWt-Zp-ZcZ" secondAttribute="top" constant="8" id="fRp-IZ-Xca"/>
+                                                <constraint firstItem="iev-BF-DOk" firstAttribute="top" secondItem="OWt-Zp-ZcZ" secondAttribute="top" constant="8" id="ike-Cq-hQz"/>
+                                                <constraint firstItem="7ii-7w-sMI" firstAttribute="top" secondItem="nO7-x7-R0b" secondAttribute="bottom" constant="5" id="jDC-6x-fEa"/>
+                                                <constraint firstItem="vvP-XI-skB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nO7-x7-R0b" secondAttribute="trailing" constant="38" id="oFj-yj-KBw"/>
+                                                <constraint firstAttribute="trailing" secondItem="vvP-XI-skB" secondAttribute="trailing" constant="8" id="pvR-Nf-Psq"/>
+                                                <constraint firstAttribute="trailing" secondItem="7ii-7w-sMI" secondAttribute="trailing" constant="8" id="reN-uJ-DmZ"/>
+                                                <constraint firstItem="7ii-7w-sMI" firstAttribute="leading" secondItem="fxX-OY-W8k" secondAttribute="trailing" constant="8" id="tKi-Gx-Czc"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="profileImageView" destination="fxX-OY-W8k" id="tVK-ZO-MFR"/>
