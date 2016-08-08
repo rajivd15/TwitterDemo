@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051A9A001D56AF8A0017F7DA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051A99FF1D56AF8A0017F7DA /* ProfileViewController.swift */; };
+		051A9A021D56AFF50017F7DA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051A9A011D56AFF50017F7DA /* MenuViewController.swift */; };
+		051A9A051D56B1720017F7DA /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051A9A041D56B1720017F7DA /* MenuCell.swift */; };
+		051A9A071D56C93D0017F7DA /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051A9A061D56C93D0017F7DA /* HamburgerViewController.swift */; };
 		051CDAB21D4D589A00345208 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CDAB11D4D589A00345208 /* AppDelegate.swift */; };
 		051CDAB71D4D589A00345208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051CDAB51D4D589A00345208 /* Main.storyboard */; };
 		051CDABA1D4D589A00345208 /* TwitterDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 051CDAB81D4D589A00345208 /* TwitterDemo.xcdatamodeld */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		051A99FF1D56AF8A0017F7DA /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		051A9A011D56AFF50017F7DA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		051A9A041D56B1720017F7DA /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		051A9A061D56C93D0017F7DA /* HamburgerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
 		051CDAAE1D4D589A00345208 /* TwitterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		051CDAB11D4D589A00345208 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		051CDAB61D4D589A00345208 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		051A9A031D56B1460017F7DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				051A9A041D56B1720017F7DA /* MenuCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		051CDAA51D4D589A00345208 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +93,7 @@
 		051CDAB01D4D589A00345208 /* TwitterDemo */ = {
 			isa = PBXGroup;
 			children = (
+				051A9A031D56B1460017F7DA /* Views */,
 				05D671711D4F18180045A8A5 /* API */,
 				05D6716C1D4F0A0B0045A8A5 /* View Controllers */,
 				05D6716B1D4F0A050045A8A5 /* Models */,
@@ -107,6 +124,9 @@
 				05D671741D4F2AB70045A8A5 /* TweetsViewController.swift */,
 				057EAE231D503DAB00E4AEF4 /* TweetDetailViewController.swift */,
 				057EAE251D50683400E4AEF4 /* ComposeViewController.swift */,
+				051A99FF1D56AF8A0017F7DA /* ProfileViewController.swift */,
+				051A9A011D56AFF50017F7DA /* MenuViewController.swift */,
+				051A9A061D56C93D0017F7DA /* HamburgerViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -264,9 +284,13 @@
 				051CDABA1D4D589A00345208 /* TwitterDemo.xcdatamodeld in Sources */,
 				057EAE221D4FF45D00E4AEF4 /* TweetCell.swift in Sources */,
 				057EAE261D50683400E4AEF4 /* ComposeViewController.swift in Sources */,
+				051A9A071D56C93D0017F7DA /* HamburgerViewController.swift in Sources */,
+				051A9A001D56AF8A0017F7DA /* ProfileViewController.swift in Sources */,
+				051A9A021D56AFF50017F7DA /* MenuViewController.swift in Sources */,
 				05D671701D4F0A410045A8A5 /* Tweet.swift in Sources */,
 				05D671731D4F18340045A8A5 /* TwitterClient.swift in Sources */,
 				05D6716E1D4F0A330045A8A5 /* User.swift in Sources */,
+				051A9A051D56B1720017F7DA /* MenuCell.swift in Sources */,
 				051CDAB21D4D589A00345208 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

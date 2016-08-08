@@ -80,7 +80,6 @@ class TwitterClient: BDBOAuth1SessionManager {
                 }, failure: { (error: NSError) in
                     self.loginFailure?(error)
             })
-            
         }) { (error: NSError!) in
             print("ERROR \(error.localizedDescription)")
             self.loginFailure?(error)

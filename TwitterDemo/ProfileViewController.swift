@@ -1,15 +1,14 @@
 //
-//  LoginViewController.swift
+//  ProfileViewController.swift
 //  TwitterDemo
 //
-//  Created by Rajiv Deshmukh on 7/30/16.
+//  Created by Rajiv Deshmukh on 8/6/16.
 //  Copyright © 2016 Rajiv Deshmukh. All rights reserved.
 //
 
 import UIKit
-import BDBOAuth1Manager
 
-class LoginViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,15 +21,6 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onLoginButton(sender: AnyObject) {
-        
-        TwitterClient.sharedInstance.login({
-            print("I have logged in!")
-            self.performSegueWithIdentifier("hamburgerSegue", sender: nil)
-        }) { (error: NSError) in
-            print("Error: \(error.localizedDescription)")
-        }
-    }
 
     /*
     // MARK: - Navigation
