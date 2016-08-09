@@ -27,7 +27,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
-        
+               
         client.homeTimeline({ (data: [Tweet]) in
             self.tweets = data
             self.tableView.reloadData()
@@ -57,9 +57,19 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         
         
         cell.tweetDetails = tweets[indexPath.row]
+        
+//        var tap = UITapGestureRecognizer(target: self, action: Selector("tappedMe"))
+//        cell.imageView!.addGestureRecognizer(tap)
+//        cell.userInteractionEnabled = true
+        
         return cell
     }
-
+    
+    func tappedMe()
+    {
+        print("Tapped on Image")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -88,6 +98,14 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
             
             let tweetDetailViewController = segue.destinationViewController as! TweetDetailViewController
             tweetDetailViewController.tweet = tweet
+        } else if segue.identifier == "profileViewSegue" {
+            print("prepare for for profile view")
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)
+            let tweet = tweets[(indexPath!.row)]
+            
+            let profileViewController = segue.destinationViewController as! ProfileViewController
+            profileViewController.screenName = tweet.user?.screenname
         }
         
     }

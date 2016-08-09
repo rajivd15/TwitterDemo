@@ -38,7 +38,6 @@ class HamburgerViewController: UIViewController {
         })
     }
     
-    
     var originalLeftMargin: CGFloat!
     var menuViewController: UIViewController! {
         didSet(oldContentViewController) {
@@ -58,8 +57,6 @@ class HamburgerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,7 +64,6 @@ class HamburgerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
    
-    
     // Do any additional setup after loading the view.
     @IBAction func onPanGesture(sender: UIPanGestureRecognizer) {
         let translation = sender.translationInView(view)
@@ -100,5 +96,4 @@ class HamburgerViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

@@ -16,16 +16,30 @@ class TwitterClient: BDBOAuth1SessionManager {
     var loginSuccess: (() -> ())?
     var loginFailure: ((NSError) -> ())?
     
-    func homeTimeline(success: ([Tweet]) -> (), failure: (NSError) -> ()) {
+    func userProfileData(success: (user : User) -> (), failure: (NSError) -> (), parameters: [String:String] ) {
     
+        //GET twitter client home timeline
+        GET("1.1/users/show.json", parameters: parameters, progress: nil, success: { (task : NSURLSessionDataTask, response: AnyObject?) in
+            
+            let userDictionary = response as! NSDictionary
+            let user = User(dictionary: userDictionary)
+            success(user: user)
+            
+            }, failure: { (task: NSURLSessionDataTask?, error: NSError) in
+                failure(error)
+        })
+    }
+    
+    func homeTimeline(success: ([Tweet]) -> (), failure: (NSError) -> ()) {
+        
         //GET twitter client home timeline
         GET("1.1/statuses/home_timeline.json", parameters: nil, progress: nil, success: { (task : NSURLSessionDataTask, response: AnyObject?) in
             
             let dictionaries = response as! [NSDictionary]
             let tweets = Tweet.tweetsWithArray(dictionaries)
-//            for tweet in tweets {
-//                print("\(tweet.text)")
-//            }
+            //            for tweet in tweets {
+            //                print("\(tweet.text)")
+            //            }
             
             success(tweets)
             }, failure: { (task: NSURLSessionDataTask?, error: NSError) in

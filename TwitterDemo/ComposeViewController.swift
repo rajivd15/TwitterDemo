@@ -21,7 +21,7 @@ class ComposeViewController: UIViewController {
         super.viewDidLoad()
         composeImageView.setImageWithURL((User.currentUser?.profileUrl)!)
         composeUsernameLabel.text = User.currentUser?.name as! String
-        composeTwitterNameLabel.text = User.currentUser?.screenname as! String 
+        composeTwitterNameLabel.text = User.currentUser?.screenname as! String
         // Do any additional setup after loading the view.
     }
 

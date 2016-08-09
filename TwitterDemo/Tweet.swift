@@ -18,7 +18,7 @@ class Tweet: NSObject {
     
     init(dictionary: NSDictionary) {
         text = dictionary["text"] as? String
-        
+        print("I am here - \(text)")
         let userDictionary = (dictionary["user"]as! NSDictionary)
         user = User(dictionary: userDictionary)
 

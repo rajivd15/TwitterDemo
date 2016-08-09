@@ -31,16 +31,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             hamburgerViewController.menuViewController = menuViewController
             
-            
-            window?.rootViewController = hamburgerViewController
+            window!.rootViewController = hamburgerViewController
         }
-        
+    
         NSNotificationCenter.defaultCenter().addObserverForName(User.userDidLogoutNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (NSNotification) in
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateInitialViewController()
             
-            self.window?.rootViewController = vc
+            self.window!.rootViewController = vc
         }
         return true
     }
